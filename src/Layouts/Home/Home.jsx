@@ -1,11 +1,13 @@
+import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
+import Products from "../Contants/Products/Products";
 
 const Home = () => {
     return (
         <div className=" pt-5 md:pt-10">
             <Navbar></Navbar>
-            <h2>contant</h2>
-            <h2>Footer</h2>
+            <div className=" min-h-screen"><Products></Products></div>
+            <Footer></Footer>
         </div>
     );
 };

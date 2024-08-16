@@ -1,43 +1,46 @@
 
-const brandFilters = <>
-    <details>
-        <summary>Brand</summary>
-        <ul className=" md:w-40 p-2 bg-white ">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-        </ul>
-    </details>
-</>
 
-const categoryFilters = <>
-    <details>
-        <summary>Category</summary>
-        <ul className=" md:w-40 p-2 bg-white">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-        </ul>
-    </details>
-</>
-
-const priceRange = <>
-    <details>
-        <summary>Price Range</summary>
-        <ul className=" md:w-40 p-2 bg-white">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-        </ul>
-    </details>
-</>
-
-const searchField = <div className="form-control">
-    <input type="text" placeholder="Search" className="input input-bordered w-auto" />
-</div>
-
-const navBtn = <>
-    <button className=" btn btn-ghost font-bold text-lg">Log In</button>
-</>
 
 const Navbar = () => {
+
+    const brandFilters = <>
+        <details>
+            <summary>Brand</summary>
+            <ul className=" md:w-40 p-2 bg-white ">
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+            </ul>
+        </details>
+    </>
+
+    const categoryFilters = <>
+        <details>
+            <summary>Category</summary>
+            <ul className=" md:w-40 p-2 bg-white">
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+            </ul>
+        </details>
+    </>
+
+    const priceRange = <>
+        <details>
+            <summary>Price Range</summary>
+            <ul className=" md:w-40 p-2 bg-white">
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+            </ul>
+        </details>
+    </>
+
+    const searchField = <div className="form-control">
+        <input type="text" placeholder="Search" className="input input-bordered w-auto" />
+    </div>
+
+    const navBtn = <>
+        <button className=" btn btn-ghost font-bold text-lg">Log In</button>
+    </>
+
     return (
         <div className=" w-5/6 mx-auto">
             <div className="navbar bg-white">
