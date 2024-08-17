@@ -1,6 +1,11 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, Navigate } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Register = () => {
+
+    const {googleLogIn, } = useContext(AuthContext);
 
     const handleRegister = e => {
 
@@ -11,6 +16,26 @@ const Register = () => {
         const password = e.target.password.value;
 
         console.log(name,email, password)
+    }
+
+    const handleGoogle = () => {
+        googleLogIn()
+        .then(() => {
+            Swal.fire({
+                title: "Registered!",
+                text: "You've successfully registered.",
+                icon: "success"
+            });
+            Navigate('/')
+
+        })
+        .catch(() => {
+            Swal.fire({
+                title: "Error!",
+                text: "Something went wrong.",
+                icon: "error"
+            });
+        })
     }
     return (
         <div>
@@ -50,7 +75,7 @@ const Register = () => {
                                 <button type="submit" className="btn btn-primary text-lg font-semibold">Register</button>
                             </div>
                         </form>
-                        <button className="btn btn-primary text-lg font-semibold mx-8 mb-8 ">Google</button>
+                        <button onClick={handleGoogle} className="btn btn-primary text-lg font-semibold mx-8 mb-8 ">Google</button>
                     </div>
                 </div>
             </div>
