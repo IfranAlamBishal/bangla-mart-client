@@ -1,41 +1,57 @@
 import { useContext } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const Register = () => {
 
-    const {googleLogIn, } = useContext(AuthContext);
+    const { googleLogIn, createUser, } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleRegister = e => {
 
         e.preventDefault();
 
-        const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        console.log(name,email, password)
+
+        createUser(email, password)
+            .then(() => {
+                Swal.fire({
+                    title: "Registered!",
+                    text: "You've successfully registered.",
+                    icon: "success"
+                });
+                navigate('/');
+            })
+            .catch(() => {
+                Swal.fire({
+                    title: "Error!",
+                    text: "Something went wrong.",
+                    icon: "error"
+                });
+            })
     }
 
     const handleGoogle = () => {
         googleLogIn()
-        .then(() => {
-            Swal.fire({
-                title: "Registered!",
-                text: "You've successfully registered.",
-                icon: "success"
-            });
-            Navigate('/')
+            .then(() => {
+                Swal.fire({
+                    title: "Registered!",
+                    text: "You've successfully registered.",
+                    icon: "success"
+                });
+                navigate('/')
 
-        })
-        .catch(() => {
-            Swal.fire({
-                title: "Error!",
-                text: "Something went wrong.",
-                icon: "error"
-            });
-        })
+            })
+            .catch(() => {
+                Swal.fire({
+                    title: "Error!",
+                    text: "Something went wrong.",
+                    icon: "error"
+                });
+            })
     }
     return (
         <div>
@@ -49,7 +65,7 @@ const Register = () => {
                     </div>
                     <div className="card bg-red-400 w-full max-w-sm shrink-0 shadow-2xl">
                         <form className="card-body" onSubmit={handleRegister}>
-                        <div className="form-control">
+                            <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>

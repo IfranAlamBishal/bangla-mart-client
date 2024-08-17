@@ -1,6 +1,12 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
+
+    const { googleLogIn, logIn } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleLogin = e => {
 
@@ -9,8 +15,45 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        console.log(email, password)
+        logIn(email, password)
+        .then(() => {
+            Swal.fire({
+                title: "Registered!",
+                text: "You've successfully registered.",
+                icon: "success"
+            });
+            navigate('/')
+
+        })
+        .catch(() => {
+            Swal.fire({
+                title: "Error!",
+                text: "Something went wrong.",
+                icon: "error"
+            });
+        })
     }
+
+    const handleGoogle = () => {
+        googleLogIn()
+            .then(() => {
+                Swal.fire({
+                    title: "Registered!",
+                    text: "You've successfully registered.",
+                    icon: "success"
+                });
+                navigate('/')
+
+            })
+            .catch(() => {
+                Swal.fire({
+                    title: "Error!",
+                    text: "Something went wrong.",
+                    icon: "error"
+                });
+            })
+    }
+
     return (
         <div>
             <div className="hero min-h-screen bg-green-400">
@@ -18,11 +61,11 @@ const Login = () => {
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Login now!</h1>
                         <p className="py-6">
-                        Welcome back! Please log in to access your account.
+                            Welcome back! Please log in to access your account.
                         </p>
                     </div>
                     <div className="card bg-red-400 w-full max-w-sm shrink-0 shadow-2xl">
-                        <form className="card-body" onSubmit={handleLogin}> 
+                        <form className="card-body" onSubmit={handleLogin}>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -39,14 +82,14 @@ const Login = () => {
                                 </label>
                                 <label className="label">
                                     <p>New here? <span><Link to='/register' className=" text-blue-600 font-semibold">Register</Link></span> now to get full access.</p>
-                                    
+
                                 </label>
                             </div>
                             <div className="form-control mt-6">
                                 <button type="submit" className="btn btn-primary text-lg font-semibold">Login</button>
                             </div>
                         </form>
-                        <button className="btn btn-primary text-lg font-semibold mx-8 mb-8 ">Google</button>
+                        <button onClick={handleGoogle} className="btn btn-primary text-lg font-semibold mx-8 mb-8 ">Google</button>
                     </div>
                 </div>
             </div>
