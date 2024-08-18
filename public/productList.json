@@ -22,6 +22,17 @@
         "creation_time": "10:30:20"
     },
     {
+        "product_name": "Travel Pillow",
+        "brand": "B-Trend",
+        "image": "https://i.ibb.co/J7Xd60Y/Travel-Pillows-lowres-9709.jpg",
+        "category": "Lifestyle",
+        "description": "Comfortable travel pillow for neck support on the go.",
+        "price": 29.99,
+        "rating": 4.6,
+        "creation_date": "2024-08-06",
+        "creation_time": "15:15:00"
+    },
+    {
         "product_name": "4K Ultra HD TV",
         "brand": "TechX",
         "image": "https://i.ibb.co/17Yp6Nh/86be0b52-6121-11ed-9e3f-dacbf78a0ad1.webp",
@@ -86,6 +97,17 @@
         "rating": 4.3,
         "creation_date": "2024-08-03",
         "creation_time": "11:30:00"
+    },
+    {
+        "product_name": "Sunglasses Case",
+        "brand": "FireFest",
+        "image": "https://i.ibb.co/LhmNyVQ/61-Krqt-YNis-L-AC-SL1500.jpg",
+        "category": "Accessories",
+        "description": "Protective case for sunglasses with a stylish design.",
+        "price": 14.99,
+        "rating": 4.3,
+        "creation_date": "2024-08-04",
+        "creation_time": "12:45:00"
     },
     {
         "product_name": "Omega-3 Fish Oil",
@@ -167,7 +189,7 @@
     {
         "product_name": "LED Keychain",
         "brand": "FireFest",
-        "image": "https://example.com/images/led_keychain.jpg",
+        "image": "https://i.ibb.co/52VkHMJ/71e-PMf-O8-Dg-L-AC-UY1000.jpg",
         "category": "Accessories",
         "description": "Compact LED keychain with bright light and durable design.",
         "price": 9.99,
@@ -198,17 +220,6 @@
         "creation_time": "11:30:00"
     },
     {
-        "product_name": "Sunglasses Case",
-        "brand": "FireFest",
-        "image": "https://example.com/images/sunglasses_case.jpg",
-        "category": "Accessories",
-        "description": "Protective case for sunglasses with a stylish design.",
-        "price": 14.99,
-        "rating": 4.3,
-        "creation_date": "2024-08-04",
-        "creation_time": "12:45:00"
-    },
-    {
         "product_name": "Elegant Necklace",
         "brand": "FireFest",
         "image": "https://example.com/images/elegant_necklace.jpg",
@@ -218,17 +229,6 @@
         "rating": 4.7,
         "creation_date": "2024-08-05",
         "creation_time": "14:00:00"
-    },
-    {
-        "product_name": "Travel Pillow",
-        "brand": "B-Trend",
-        "image": "https://example.com/images/travel_pillow.jpg",
-        "category": "Lifestyle",
-        "description": "Comfortable travel pillow for neck support on the go.",
-        "price": 29.99,
-        "rating": 4.6,
-        "creation_date": "2024-08-06",
-        "creation_time": "15:15:00"
     },
     {
         "product_name": "Elegant Sunglasses",

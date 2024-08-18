@@ -8,7 +8,8 @@ const Products = () => {
 
     useEffect(() => {
         const productData = async () => {
-            const response = await fetch('/public/productList.json');
+            //const response = await fetch('/public/productList.json');
+            const response = await fetch('https://bangla-mart-server-pi.vercel.app/products');
             const data = await response.json();
             setAllProducts(data);
             console.log(data)
@@ -21,7 +22,7 @@ const Products = () => {
             <h2 className=" text-3xl font-semibold mb-10">Total Products : {allProducts.length}</h2>
 
             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {allProducts.map(product => <ProductCard key={product.product_name} product={product}/>) }
+                {allProducts.map(product => <ProductCard key={product._id} product={product}/>) }
             </div>
         </div>
     );
