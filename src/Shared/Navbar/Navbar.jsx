@@ -31,8 +31,10 @@ const Navbar = () => {
         <details>
             <summary>Brand</summary>
             <ul className=" md:w-40 p-2 bg-white ">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
+                <li><a>B-Trend</a></li>
+                <li><a>FireFest</a></li>
+                <li><a>GoodLife</a></li>
+                <li><a>TechX</a></li>
             </ul>
         </details>
     </>
@@ -41,8 +43,10 @@ const Navbar = () => {
         <details>
             <summary>Category</summary>
             <ul className=" md:w-40 p-2 bg-white">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
+                <li><a>Accessories</a></li>
+                <li><a>Electronics</a></li>
+                <li><a>Healthcare</a></li>
+                <li><a>Lifestyle</a></li>
             </ul>
         </details>
     </>
@@ -51,8 +55,10 @@ const Navbar = () => {
         <details>
             <summary>Price Range</summary>
             <ul className=" md:w-40 p-2 bg-white">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
+                <li><a>0$-100$</a></li>
+                <li><a>101$-500$</a></li>
+                <li><a>601$-1000$</a></li>
+                <li><a>1000$+</a></li>
             </ul>
         </details>
     </>
